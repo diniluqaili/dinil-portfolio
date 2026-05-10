@@ -10,7 +10,7 @@
 }
 
 :root {
-  --lime:     #C8FF00;
+  --neon:     #C8FF00;
   --dark:     #08080E;
   --surface:  #0F0F1A;
   --surface2: #14141F;
@@ -34,3 +34,8 @@ body {
 ::-webkit-scrollbar { width: 3px;}
 ::-webkit-scrollbar-track { background: var(--dark);}
 ::-webkit-scrollbar-thumb { background: var(--lime);}
+
+@keyframes pulse2 {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
