@@ -22,6 +22,10 @@ export interface Translation {
     locNote: string
     stats: { value: string, label: string }[]
     }
+  skills: {
+    title: string
+    categories: { name: string, items: string[] }[]
+  }
 }
 
 export const translations: Record<Language, Translation> = {
@@ -52,6 +56,16 @@ export const translations: Record<Language, Translation> = {
             { value: '1', label: 'Thesis Published' },
         ],
     },
+    skills: {
+  title: 'Tech Stack',
+  categories: [
+    { name: 'Frontend', items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML / CSS'] },
+    { name: 'Backend',  items: ['Node.js', 'Python', 'Firebase', 'REST API', 'WebSocket'] },
+    { name: 'AI / ML',  items: ['TensorFlow', 'CNN-LSTM', 'Autoencoder', 'ICA / SST', 'Signal Processing'] },
+    { name: 'IoT',      items: ['ESP32', 'Arduino', 'MQTT', 'PID Control', 'Sensor Arrays'] },
+    { name: 'Tools',    items: ['Git / GitHub', 'Vercel', 'Figma', 'VS Code', 'Linux / Bash'] },
+  ],
+},
   },
   id: {
     nav: {
@@ -80,5 +94,15 @@ export const translations: Record<Language, Translation> = {
         { value: '1', label: 'Tesis Diterbitkan' },
       ],
     },
+    skills: {
+  title: 'Teknologi',
+  categories: [
+    { name: 'Frontend',   items: ['React', 'Next.js', 'TypeScript', 'Tailwind CSS', 'HTML / CSS'] },
+    { name: 'Backend',    items: ['Node.js', 'Python', 'Firebase', 'REST API', 'WebSocket'] },
+    { name: 'AI / ML',    items: ['TensorFlow', 'CNN-LSTM', 'Autoencoder', 'ICA / SST', 'Pemrosesan Sinyal'] },
+    { name: 'IoT',        items: ['ESP32', 'Arduino', 'MQTT', 'Kontrol PID', 'Array Sensor'] },
+    { name: 'Peralatan',  items: ['Git / GitHub', 'Vercel', 'Figma', 'VS Code', 'Linux / Bash'] },
+  ],
+},
   },
 }
