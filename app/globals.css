@@ -1,27 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  --lime:     #C8FF00;
+  --dark:     #08080E;
+  --surface:  #0F0F1A;
+  --surface2: #14141F;
+  --edge:     #1C1C2E;
+  --muted:    #55556E;
+  --text:     #DEDEE8;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--dark);
+  color: var(--text);
+  font-family: 'Space Mono', monospace;
+  overflow-x: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
+/* Scrollbar */
+::-webkit-scrollbar { width: 3px;}
+::-webkit-scrollbar-track { background: var(--dark);}
+::-webkit-scrollbar-thumb { background: var(--lime);}

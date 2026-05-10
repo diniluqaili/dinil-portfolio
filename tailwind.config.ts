@@ -9,11 +9,21 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        neon:     "#C8FF00",
+        dark:     "#08080E",
+        surface:  "#0F0F1A",
+        surface2: "#14141F",
+        edge:     "#1C1C2E",
+        muted:    "#55556E",
+        primary:  "#DEDEE8",
+      },
+      fontFamily: {
+        syne: ["Syne", "sans-serif"],
+        mono: ['"Space Mono"', "monospace"],
       },
     },
   },
   plugins: [],
 };
+
 export default config;
