@@ -40,11 +40,20 @@ export interface Translation {
     }[]
     }
   contact: {
-    title: string
-    titleAccent: string
-    sub: string
-    linkedin: string
-  }
+  title: string
+  titleAccent: string
+  sub: string
+  linkedin: string
+  form: {
+    name: string
+    email: string
+    message: string
+    send: string
+    sending: string
+    success: string
+    error: string
+    },
+  },
 }
 
 export const translations: Record<Language, Translation> = {
@@ -136,8 +145,17 @@ export const translations: Record<Language, Translation> = {
   title: "Let's Work",
   titleAccent: 'Together.',
   sub: "Open to remote opportunities worldwide — let's build something extraordinary.",
-  linkedin: 'linkedin/diniluqaili',
-},
+  linkedin: 'linkedin/aetozed',
+  form: {
+    name: 'Your Name',
+    email: 'Your Email',
+    message: 'Message',
+    send: 'Send Message',
+    sending: 'Sending...',
+    success: '✓ Message Sent',
+    error: 'Failed — Try Again',
+      },
+    },
   },
   id: {
     nav: {
@@ -227,7 +245,16 @@ contact: {
   title: 'Mari',
   titleAccent: 'Berkolaborasi.',
   sub: 'Terbuka untuk peluang remote di seluruh dunia — mari bangun sesuatu yang luar biasa.',
-  linkedin: 'linkedin/diniluqaili',
+  linkedin: 'linkedin/aetozed',
+  form: {
+    name: 'Nama Anda',
+    email: 'Email Anda',
+    message: 'Pesan',
+    send: 'Kirim Pesan',
+    sending: 'Mengirim...',
+    success: '✓ Pesan Terkirim',
+    error: 'Gagal — Coba Lagi',
+  },
 },
   },
 }
