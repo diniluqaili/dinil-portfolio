@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useInView } from "@/lib/useInView";
 import { useLang } from "@/context/LangContext";
 
@@ -122,6 +123,23 @@ export default function Projects() {
                 <Tag key={tag} label={tag} />
               ))}
             </div>
+
+            <div
+              style={{
+                marginTop: "1.5rem",
+                borderRadius: "2px",
+                overflow: "hidden",
+                border: "1px solid var(--edge)",
+              }}
+            >
+              <Image
+                src="/project-eeg.png"
+                alt="EEG ASD Classification"
+                width={600}
+                height={338}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </div>
           </div>
 
           {/* Architecture code block */}
@@ -220,6 +238,27 @@ export default function Projects() {
                   <Tag key={tag} label={tag} />
                 ))}
               </div>
+
+              <div
+                style={{
+                  marginTop: "1.5rem",
+                  borderRadius: "2px",
+                  overflow: "hidden",
+                  border: "1px solid var(--edge)",
+                }}
+              >
+                <Image
+                  src={
+                    project.id === 2
+                      ? "/project-iot.png"
+                      : "/project-carwash.png"
+                  }
+                  alt={project.title}
+                  width={600}
+                  height={338}
+                  style={{ width: "100%", height: "auto", display: "block" }}
+                />
+              </div>
             </div>
           ))}
         </div>
@@ -278,6 +317,25 @@ export default function Projects() {
             {items[3].tags.map((tag) => (
               <Tag key={tag} label={tag} />
             ))}
+          </div>
+          <div style={{ flex: "0 0 auto", width: "100%" }}>
+            <div
+              style={{
+                marginTop: "1rem",
+                borderRadius: "2px",
+                overflow: "hidden",
+                border: "1px solid var(--edge)",
+                maxWidth: 400,
+              }}
+            >
+              <Image
+                src="/project-openbci.png"
+                alt="OpenBCI Signal Processing"
+                width={400}
+                height={225}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </div>
           </div>
         </div>
       </div>
