@@ -8,10 +8,12 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
 import LoadingScreen from "@/components/LoadingScreen";
+import CursorTrail from "@/components/CursorTrail";
 
 export default function Home() {
   return (
     <>
+      <CursorTrail />
       <LoadingScreen />
       <ScrollProgress />
       <Nav />

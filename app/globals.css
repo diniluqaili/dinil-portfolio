@@ -238,3 +238,9 @@ body {
 .anim-delay-3 { animation-delay: 0.3s; opacity: 0; }
 .anim-delay-4 { animation-delay: 0.4s; opacity: 0; }
 .anim-delay-5 { animation-delay: 0.5s; opacity: 0; }
+
+@media (min-width: 769px) {
+  * {
+    cursor: none !important;
+  }
+}
