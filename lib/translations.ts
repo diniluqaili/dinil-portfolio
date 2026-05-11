@@ -25,6 +25,18 @@ export interface Translation {
   skills: {
     title: string
     categories: { name: string, items: string[] }[]
+    }
+    projects: {
+    title: string
+    items: {
+      id: number
+      category: string
+      title: string
+      desc: string
+      tags: string[]
+      architecture?: string[]
+      meta?: { label: string; value: string }[]
+    }[]
   }
 }
 
@@ -66,6 +78,52 @@ export const translations: Record<Language, Translation> = {
     { name: 'Tools',    items: ['Git / GitHub', 'Vercel', 'Figma', 'VS Code', 'Linux / Bash'] },
   ],
 },
+    projects: {
+    title: 'Featured Projects',
+    items: [
+      {
+        id: 1,
+        category: 'AI / Research · Thesis',
+        title: 'EEG-Based ASD Classification',
+        desc: 'Thesis research classifying Autism Spectrum Disorder from EEG signals using Autoencoder denoising, SST feature extraction, and a CNN-LSTM architecture trained on the KAU dataset (16 subjects).',
+        tags: ['Python', 'CNN-LSTM', 'TensorFlow', 'EEG', 'ICA', 'SST'],
+        architecture: [
+          'KAU Dataset (16 subjects)',
+          '  → Bandpass Filter',
+          '  → ICA Artifact Removal',
+          '  → Autoencoder Denoising',
+          '  → SST Feature Extraction',
+          '  → CNN-LSTM Classifier',
+        ],
+        meta: [
+          { label: 'Model',    value: 'CNN-LSTM' },
+          { label: 'Dataset',  value: 'KAU EEG'  },
+          { label: 'Subjects', value: '16'        },
+        ],
+      },
+      {
+        id: 2,
+        category: 'IoT · Hardware',
+        title: 'ESP32 + Firebase IoT System',
+        desc: 'End-to-end sensor pipeline streaming ultrasonic, sound, pH, and temperature data to Firebase Realtime Database with a live web dashboard.',
+        tags: ['ESP32', 'Firebase', 'JavaScript', 'Realtime DB'],
+      },
+      {
+        id: 3,
+        category: 'Fullstack · Web',
+        title: 'Carwash Booking Platform',
+        desc: 'Production-grade React/Next.js booking application with Google OAuth authentication, payment integration, and real-time scheduling.',
+        tags: ['Next.js', 'React', 'Google Auth', 'Payments'],
+      },
+      {
+        id: 4,
+        category: 'AI / IoT · Signal',
+        title: 'OpenBCI Signal Processing',
+        desc: 'Real-time EEG signal visualization and heatmap generation from OpenBCI hardware at 250 Hz. Python pipeline covering windowing, FFT analysis, and topographic brain mapping.',
+        tags: ['Python', 'OpenBCI', 'FFT', 'Heatmap'],
+      },
+    ],
+  },
   },
   id: {
     nav: {
@@ -102,6 +160,52 @@ export const translations: Record<Language, Translation> = {
     { name: 'AI / ML',    items: ['TensorFlow', 'CNN-LSTM', 'Autoencoder', 'ICA / SST', 'Pemrosesan Sinyal'] },
     { name: 'IoT',        items: ['ESP32', 'Arduino', 'MQTT', 'Kontrol PID', 'Array Sensor'] },
     { name: 'Peralatan',  items: ['Git / GitHub', 'Vercel', 'Figma', 'VS Code', 'Linux / Bash'] },
+  ],
+},
+  projects: {
+  title: 'Proyek Unggulan',
+  items: [
+    {
+      id: 1,
+      category: 'AI / Riset · Tesis',
+      title: 'Klasifikasi ASD Berbasis EEG',
+      desc: 'Riset tesis mengklasifikasikan Autism Spectrum Disorder dari sinyal EEG menggunakan Autoencoder denoising, ekstraksi fitur SST, dan arsitektur CNN-LSTM pada dataset KAU (16 subjek).',
+      tags: ['Python', 'CNN-LSTM', 'TensorFlow', 'EEG', 'ICA', 'SST'],
+      architecture: [
+        'Dataset KAU (16 subjek)',
+        '  → Bandpass Filter',
+        '  → Penghapusan Artefak ICA',
+        '  → Autoencoder Denoising',
+        '  → Ekstraksi Fitur SST',
+        '  → CNN-LSTM Classifier',
+      ],
+      meta: [
+        { label: 'Model',   value: 'CNN-LSTM' },
+        { label: 'Dataset', value: 'KAU EEG'  },
+        { label: 'Subjek',  value: '16'        },
+      ],
+    },
+    {
+      id: 2,
+      category: 'IoT · Hardware',
+      title: 'Sistem IoT ESP32 + Firebase',
+      desc: 'Pipeline sensor end-to-end yang mengalirkan data ultrasonik, suara, pH, dan suhu ke Firebase Realtime Database dengan dashboard web langsung.',
+      tags: ['ESP32', 'Firebase', 'JavaScript', 'Realtime DB'],
+    },
+    {
+      id: 3,
+      category: 'Fullstack · Web',
+      title: 'Platform Booking Carwash',
+      desc: 'Aplikasi booking React/Next.js dengan Google OAuth authentication, integrasi pembayaran, dan penjadwalan real-time.',
+      tags: ['Next.js', 'React', 'Google Auth', 'Pembayaran'],
+    },
+    {
+      id: 4,
+      category: 'AI / IoT · Sinyal',
+      title: 'Pemrosesan Sinyal OpenBCI',
+      desc: 'Visualisasi sinyal EEG real-time dan generasi heatmap dari hardware OpenBCI pada 250 Hz. Pipeline Python mencakup windowing, analisis FFT, dan pemetaan otak topografi.',
+      tags: ['Python', 'OpenBCI', 'FFT', 'Heatmap'],
+    },
   ],
 },
   },
