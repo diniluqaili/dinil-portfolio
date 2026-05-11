@@ -220,6 +220,56 @@ export default function Hero() {
               {t.hero.ctaContact}
             </button>
           </a>
+
+          {/* ← ADD THIS: CV Download button */}
+
+          <a
+            href="/M. Syarafuddinil Uqaili_Resume_2026.pdf"
+            download="M. Syarafuddinil Uqaili_Resume_2026.pdf"
+            style={{ textDecoration: "none" }}
+          >
+            <button
+              style={{
+                background: "transparent",
+                color: "var(--neon)",
+                border: "1px solid var(--neon)",
+                padding: "0.8rem 2rem",
+                fontSize: "0.72rem",
+                letterSpacing: "0.15em",
+                textTransform: "uppercase",
+                cursor: "pointer",
+                fontFamily: "Space Mono, monospace",
+                transition: "background 0.2s, color 0.2s",
+                display: "flex",
+                alignItems: "center",
+                gap: "0.5rem",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.background = "var(--neon)";
+                e.currentTarget.style.color = "var(--dark)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.background = "transparent";
+                e.currentTarget.style.color = "var(--neon)";
+              }}
+            >
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              {t.hero.ctaCV}
+            </button>
+          </a>
         </div>
       </div>
     </section>

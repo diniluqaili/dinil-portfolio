@@ -14,6 +14,7 @@ export interface Translation {
     bio: string
     ctaWork: string
     ctaContact: string
+    ctaCV: string
   }
   about: {
     title: string
@@ -61,6 +62,7 @@ export const translations: Record<Language, Translation> = {
       bio: 'I build intelligent systems — from embedded sensors to neural networks to the interfaces that connect them.',
       ctaWork: 'View Work',
       ctaContact: 'Get In Touch',
+      ctaCV: 'Download CV',
     },
     about: {
         title: 'About Me',
@@ -151,6 +153,7 @@ export const translations: Record<Language, Translation> = {
       bio: 'Saya membangun sistem cerdas — dari sensor tertanam, jaringan saraf tiruan, hingga antarmuka yang menghubungkan semuanya.',
       ctaWork: 'Lihat Proyek',
       ctaContact: 'Hubungi Saya',
+      ctaCV: 'Unduh CV',
     },
     about: {
       title: 'Tentang Saya',
