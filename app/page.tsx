@@ -4,6 +4,8 @@ import Ticker from "@/components/Ticker";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -18,7 +20,10 @@ export default function Home() {
         <Skills />
         <div style={{ width: "100%", height: 1, background: "var(--edge)" }} />
         <Projects />
+        <div style={{ width: "100%", height: 1, background: "var(--edge)" }} />
+        <Contact />
       </main>
+      <Footer />
     </>
   );
 }

@@ -26,7 +26,7 @@ export interface Translation {
     title: string
     categories: { name: string, items: string[] }[]
     }
-    projects: {
+  projects: {
     title: string
     items: {
       id: number
@@ -37,6 +37,11 @@ export interface Translation {
       architecture?: string[]
       meta?: { label: string; value: string }[]
     }[]
+    }
+  contact: {
+    title: string
+    titleAccent: string
+    sub: string
   }
 }
 
@@ -124,6 +129,11 @@ export const translations: Record<Language, Translation> = {
       },
     ],
   },
+  contact: {
+  title: "Let's Work",
+  titleAccent: 'Together.',
+  sub: "Open to remote opportunities worldwide — let's build something extraordinary.",
+},
   },
   id: {
     nav: {
@@ -207,6 +217,11 @@ export const translations: Record<Language, Translation> = {
       tags: ['Python', 'OpenBCI', 'FFT', 'Heatmap'],
     },
   ],
+},
+contact: {
+  title: 'Mari',
+  titleAccent: 'Berkolaborasi.',
+  sub: 'Terbuka untuk peluang remote di seluruh dunia — mari bangun sesuatu yang luar biasa.',
 },
   },
 }
