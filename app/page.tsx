@@ -7,10 +7,12 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollProgress from "@/components/ScrollProgress";
+import LoadingScreen from "@/components/LoadingScreen";
 
 export default function Home() {
   return (
     <>
+      <LoadingScreen />
       <ScrollProgress />
       <Nav />
       <main>
