@@ -42,6 +42,7 @@ export interface Translation {
     title: string
     titleAccent: string
     sub: string
+    linkedin: string
   }
 }
 
@@ -133,6 +134,7 @@ export const translations: Record<Language, Translation> = {
   title: "Let's Work",
   titleAccent: 'Together.',
   sub: "Open to remote opportunities worldwide — let's build something extraordinary.",
+  linkedin: 'linkedin/diniluqaili',
 },
   },
   id: {
@@ -222,6 +224,7 @@ contact: {
   title: 'Mari',
   titleAccent: 'Berkolaborasi.',
   sub: 'Terbuka untuk peluang remote di seluruh dunia — mari bangun sesuatu yang luar biasa.',
+  linkedin: 'linkedin/diniluqaili',
 },
   },
 }

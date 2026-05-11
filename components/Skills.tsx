@@ -1,22 +1,23 @@
 "use client";
 
+import { useInView } from "@/lib/useInView";
 import { useLang } from "@/context/LangContext";
 
 export default function Skills() {
   const { t } = useLang();
   const { skills } = t;
+  const { ref, inView } = useInView();
 
   return (
     <section
+      ref={ref as React.RefObject<HTMLElement>}
       id="skills"
-      style={{
-        padding: "6rem 2.5rem",
-        maxWidth: 1100,
-        margin: "0 auto",
-      }}
+      className={inView ? "section-visible-zoom" : "section-hidden"}
+      style={{ padding: "6rem 2.5rem", maxWidth: 1100, margin: "0 auto" }}
     >
       {/* Section label */}
       <p
+        className={inView ? `section-visible anim-delay-1` : "section-hidden"}
         style={{
           fontSize: "0.65rem",
           color: "var(--neon)",
@@ -30,6 +31,7 @@ export default function Skills() {
 
       {/* Title */}
       <h2
+        className={inView ? `section-visible anim-delay-2` : "section-hidden"}
         style={{
           fontFamily: "Syne, sans-serif",
           fontSize: "clamp(2rem, 5vw, 3.2rem)",
@@ -46,6 +48,9 @@ export default function Skills() {
         {skills.categories.map((cat, i) => (
           <div
             key={i}
+            className={
+              inView ? `section-visible anim-delay-${i + 1}` : "section-hidden"
+            }
             style={{
               background: "var(--surface)",
               padding: "1.5rem",

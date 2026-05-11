@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap');
+
 
 * {
   box-sizing: border-box;
@@ -146,3 +148,93 @@ body {
     display: flex !important;
   }
 }
+
+/* ─── Scroll animations ──────────────────────────────── */
+
+@keyframes flyInBottom {
+  from {
+    opacity: 0;
+    transform: perspective(800px) translateY(80px) rotateX(12deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(800px) translateY(0) rotateX(0deg);
+  }
+}
+
+@keyframes flyInLeft {
+  from {
+    opacity: 0;
+    transform: perspective(800px) translateX(-80px) rotateY(15deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(800px) translateX(0) rotateY(0deg);
+  }
+}
+
+@keyframes flyInRight {
+  from {
+    opacity: 0;
+    transform: perspective(800px) translateX(80px) rotateY(-15deg);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(800px) translateX(0) rotateY(0deg);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: perspective(800px) scale(0.85) translateZ(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(800px) scale(1) translateZ(0px);
+  }
+}
+
+@keyframes flipInX {
+  from {
+    opacity: 0;
+    transform: perspective(800px) rotateX(-30deg) translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(800px) rotateX(0deg) translateY(0);
+  }
+}
+
+/* Base hidden state */
+.section-hidden {
+  opacity: 0;
+}
+
+/* Section animations */
+.section-visible {
+  animation: flyInBottom 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.section-visible-left {
+  animation: flyInLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.section-visible-right {
+  animation: flyInRight 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.section-visible-zoom {
+  animation: zoomIn 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.section-visible-flip {
+  animation: flipInX 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Staggered children delays */
+.anim-delay-1 { animation-delay: 0.1s; opacity: 0; }
+.anim-delay-2 { animation-delay: 0.2s; opacity: 0; }
+.anim-delay-3 { animation-delay: 0.3s; opacity: 0; }
+.anim-delay-4 { animation-delay: 0.4s; opacity: 0; }
+.anim-delay-5 { animation-delay: 0.5s; opacity: 0; }

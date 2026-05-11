@@ -1,5 +1,12 @@
 "use client";
 
+import dynamic from "next/dynamic";
+
+const ParticleField = dynamic(() => import("./ParticleField"), {
+  ssr: false,
+  loading: () => null,
+});
+
 import { useState, useEffect } from "react";
 import { useLang } from "@/context/LangContext";
 
@@ -43,6 +50,9 @@ export default function Hero() {
           pointerEvents: "none",
         }}
       />
+
+      {/* 3D Particle field*/}
+      <ParticleField />
 
       {/* Glow orb top right */}
       <div
