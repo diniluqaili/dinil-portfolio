@@ -49,3 +49,96 @@ body {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
 }
+
+/* ─── Responsive ─────────────────────────────────────── */
+
+/* Nav */
+.nav-links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.nav-avail {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+}
+
+/* About grid */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 4rem;
+  align-items: start;
+}
+
+/* Skills grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--edge);
+}
+
+/* Projects row */
+.projects-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--edge);
+}
+
+/* Contact links */
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  background: var(--edge);
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+/* Slim card */
+.slim-card {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+
+  /* Hide nav links on mobile */
+  .nav-links {
+    display: none;
+  }
+
+  /* Hide available badge text on mobile */
+  .nav-avail {
+    display: none;
+  }
+
+  /* Skills: 2 columns on mobile */
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Projects row: stack on mobile */
+  .projects-row {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact links: stack on mobile */
+  .contact-links {
+    flex-direction: column;
+  }
+
+  /* Slim card: stack on mobile */
+  .slim-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

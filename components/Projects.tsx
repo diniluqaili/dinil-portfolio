@@ -165,14 +165,7 @@ export default function Projects() {
         </div>
 
         {/* Row 2: Two medium cards */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "1px",
-            background: "var(--edge)",
-          }}
-        >
+        <div className="projects-row">
           {[items[1], items[2]].map((project) => (
             <div
               key={project.id}
@@ -231,13 +224,10 @@ export default function Projects() {
 
         {/* Row 3: Slim OpenBCI card */}
         <div
+          className="slim-card"
           style={{
             background: "var(--surface)",
             padding: "1.75rem 2.5rem",
-            display: "flex",
-            alignItems: "center",
-            gap: "3rem",
-            flexWrap: "wrap",
             transition: "background 0.2s",
           }}
           onMouseEnter={(e) =>

@@ -42,14 +42,7 @@ export default function Skills() {
       </h2>
 
       {/* Five column grid */}
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(160px, 1fr))",
-          gap: "1px",
-          background: "var(--edge)",
-        }}
-      >
+      <div className="skills-grid">
         {skills.categories.map((cat, i) => (
           <div
             key={i}

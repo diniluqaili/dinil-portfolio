@@ -69,16 +69,7 @@ export default function Contact() {
         </p>
 
         {/* Contact links */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            gap: "1px",
-            background: "var(--edge)",
-            maxWidth: 580,
-            margin: "0 auto",
-          }}
-        >
+        <div className="contact-links">
           <a
             href="mailto:aetozed@gmail.com"
             style={{

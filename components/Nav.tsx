@@ -42,7 +42,7 @@ export default function Nav() {
       </div>
 
       {/* Nav links */}
-      <div style={{ display: "flex", gap: "2.5rem" }}>
+      <div className="nav-links">
         {(["about", "skills", "projects", "contact"] as const).map((key) => (
           <button
             key={key}
@@ -66,18 +66,12 @@ export default function Nav() {
         ))}
       </div>
 
-      {/* Right side: available badge + language toggle */}
+      {/* Right side */}
       <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-        {/* Pulsing available badge */}
+        {/* Available badge */}
         <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "0.5rem",
-            fontSize: "0.65rem",
-            color: "var(--neon)",
-            letterSpacing: "0.1em",
-          }}
+          className="nav-avail"
+          style={{ color: "var(--neon)", letterSpacing: "0.1em" }}
         >
           <span
             style={{
