@@ -112,6 +112,12 @@ body {
 
 @media (max-width: 768px) {
 
+  .custom-cursor {
+    display: none !important;
+  }
+   * {
+    cursor: auto !important;
+  }
   /* Hide nav links on mobile */
   .nav-links {
     display: none;

@@ -76,6 +76,7 @@ export default function CursorTrail() {
       {/* Small dot — snaps to cursor */}
       <div
         ref={cursorRef}
+        className="custom-cursor"
         style={{
           position: "fixed",
           top: 0,
@@ -94,6 +95,7 @@ export default function CursorTrail() {
       {/* Larger ring — lags behind smoothly */}
       <div
         ref={trailRef}
+        className="custom-cursor"
         style={{
           position: "fixed",
           top: 0,
