@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
 
   title: {
-    default: "Aetozed Zero — Fullstack · AI · IoT",
-    template: "%s | Aetozed Zero",
+    default: "Aetozed Zero — Fullstack Developer · AI Engineer · IoT Architect",
+    template: "%s | Aetozed Zero Portfolio",
   },
 
   description:
-    "Software engineer and researcher from Indonesia specializing in fullstack development, artificial intelligence, and embedded systems.",
+    "Software engineer and researcher from Banda Aceh, Indonesia. Specializing in fullstack web development with Next.js, artificial intelligence with TensorFlow and CNN-LSTM, and embedded IoT systems with ESP32. Open to remote opportunities worldwide.",
 
   keywords: [
     "fullstack developer",
