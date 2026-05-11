@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { LangProvider } from "@/context/LangContext";
+import { ThemeProvider } from "@/context/ThemeContext";
 
 const BASE_URL = "https://dinil-portfolio-zeta.vercel.app";
 
@@ -79,7 +80,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <LangProvider>{children}</LangProvider>
+        <ThemeProvider>
+          <LangProvider>{children}</LangProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

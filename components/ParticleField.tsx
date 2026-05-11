@@ -47,7 +47,10 @@ export default function ParticleField() {
     pointGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
     const pointMat = new THREE.PointsMaterial({
       size: 0.08,
-      color: 0xc8ff00,
+      color:
+        document.documentElement.getAttribute("data-theme") === "light"
+          ? 0x5a8a00
+          : 0xc8ff00,
       transparent: true,
       opacity: 0.85,
       sizeAttenuation: true,
@@ -77,7 +80,10 @@ export default function ParticleField() {
       new THREE.BufferAttribute(new Float32Array(linePositions), 3),
     );
     const lineMat = new THREE.LineBasicMaterial({
-      color: 0xc8ff00,
+      color:
+        document.documentElement.getAttribute("data-theme") === "light"
+          ? 0x5a8a00
+          : 0xc8ff00,
       transparent: true,
       opacity: 0.08,
     });
