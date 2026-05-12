@@ -1,18 +1,11 @@
 const ITEMS = [
-  "React",
-  "Next.js",
-  "TypeScript",
-  "Python",
-  "TensorFlow",
-  "ESP32",
-  "Firebase",
-  "CNN-LSTM",
-  "OpenBCI",
-  "Node.js",
-  "Signal Processing",
-  "Arduino",
-  "ICA / SST",
-  "Autoencoder",
+  "Sensing",
+  "Hardware",
+  "Data Analysis",
+  "AI",
+  "UX/UI",
+  "Fullstack Development",
+  "Ops & Testing",
 ];
 
 export default function Ticker() {

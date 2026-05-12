@@ -110,9 +110,9 @@ export default function Hero() {
             marginBottom: "0.6rem",
           }}
         >
-          AETOZED
+          DINIL
           <br />
-          <span style={{ color: "var(--neon)" }}>ZERO</span>
+          <span style={{ color: "var(--neon)" }}>UQAILI</span>
         </h1>
 
         {/* Cycling role */}

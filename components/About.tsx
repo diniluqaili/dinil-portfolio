@@ -95,7 +95,7 @@ export default function About() {
                 marginBottom: "0.2rem",
               }}
             >
-              Banda Aceh, Indonesia
+              Indonesia
             </p>
             <p style={{ fontSize: "0.72rem", color: "var(--muted)" }}>
               {about.locNote}

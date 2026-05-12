@@ -45,7 +45,7 @@ export default function Nav() {
             cursor: "pointer",
           }}
         >
-          AZ<span style={{ color: "var(--text)" }}>_</span>
+          DU<span style={{ color: "var(--text)" }}>_</span>
         </div>
 
         {/* Desktop nav links */}
